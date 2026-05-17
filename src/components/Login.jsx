@@ -5,9 +5,9 @@ import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { FaInstagram } from "react-icons/fa";
 import Picture from "../assets/img/ChorkRayuth.jpg";
-// import Register from "./Register";
+import Register from '/src/components/Register.jsx'
 const Login = () => {
-  const [open,setopen] = useState(false);
+  const [openmodal,setopenmodal] = useState(false);
   return (
     <>
       <div className=" w-full max-w-full h-full lg:h-172 md:h-172 flex flex-wrap gap-8 justify-center items-center  mb-4 py-2 ">
@@ -127,19 +127,28 @@ const Login = () => {
                 <Link
                   // to="/register"
                   className="font-medium text-blue-600 hover:underline"
-                  // onClick={() => {
-                  //   setopen(true);
-                  // }}
+                  onClick={
+                    () => {
+                      setopenmodal(true);
+                    }
+                  }
                 >
                   Register here
                 </Link>
               </p>
             </div>
           </form>
-          {/* {open && <Register/>}  */}
         </div>
-
         </div>
+          {
+            openmodal && (
+              <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
+                <div className="mt-20">
+                  <Register setopenmodal={setopenmodal} />
+                </div>
+              </div>
+            )
+          }
         </div>
     </>
   );
