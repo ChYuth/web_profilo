@@ -6,6 +6,7 @@ import { FcGoogle } from "react-icons/fc";
 import { FaInstagram } from "react-icons/fa";
 import Picture from "../assets/img/ChorkRayuth.jpg";
 import Register from '/src/components/Register.jsx'
+import Aos from "aos";
 const Login = () => {
   const [openmodal,setopenmodal] = useState(false);
   return (
@@ -142,7 +143,7 @@ const Login = () => {
         </div>
           {
             openmodal && (
-              <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
+              <div className="fixed inset-0 bg-black/90 flex justify-center items-center z-50">
                 <div className="mt-20">
                   <Register setopenmodal={setopenmodal} />
                 </div>

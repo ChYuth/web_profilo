@@ -28,7 +28,13 @@ const Register = ({setopenmodal}) => {
   return (
     <>
       <div className=" w-full rounded-xl shadow-xl h-full ">
-        <div className="max-w-xl  m-auto h-auto bg-zinc-100 shadow-xl rounded-4xl flex justify-center items-cente flex-col p-2 gap-2 border-b-6 border-r-2 border-l-2 border-amber-500">
+        <div className="max-w-xl  m-auto h-auto bg-zinc-100 shadow-xl rounded-4xl flex justify-center items-cente flex-col p-2 gap-2 border-b-6 border-r-2 border-l-2 border-amber-500"
+        data-aos   data-aos="fade-down"
+        data-aos-duration="600"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        >
           {/* caption and button */}
           <div className="w-full p-4 flex justify-between text-sm font-semibold text-blue-500">
             <div className=" hover:text-blue-700 cursor-pointer">
@@ -170,6 +176,7 @@ const Register = ({setopenmodal}) => {
               </div>
              <div className="w-full flex justify-center mt-4 mb-4">
                    <button type="button"
+                  //  onChange={}
                     className="bg-blue-500 py-2.5 px-2 rounded-xl m-auto text-zinc-50 hover:bg-blue-600 ">
                     Create Account
                   </button>
