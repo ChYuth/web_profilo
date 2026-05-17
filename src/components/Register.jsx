@@ -27,8 +27,8 @@ const Register = ({setopenmodal}) => {
 
   return (
     <>
-      <div className=" w-full rounded-xl shadow-xl h-full ">
-        <div className="max-w-xl  m-auto h-auto bg-zinc-100 shadow-xl rounded-4xl flex justify-center items-cente flex-col p-2 gap-2 border-b-6 border-r-2 border-l-2 border-amber-500"
+      <div className=" w-full rounded-xl shadow-xl h-full  ">
+        <div className="max-w-xl  m-auto h-auto bg-zinc-100 shadow-xl rounded-4xl flex justify-center items-cente flex-col p-2 gap-2 border-b-6 border-r-2 border-l-2 border-amber-500 overflow-y-auto"
         data-aos   data-aos="fade-down"
         data-aos-duration="600"
         data-aos-easing="ease-in-out"
@@ -63,7 +63,7 @@ const Register = ({setopenmodal}) => {
           <div>
             <form action="#">
               {/*  Name */}
-              <div className="flex flex-col gap-1 mb-4 w-full px-8 m-auto">
+              <div className="flex flex-col gap-1 mb-2 w-full px-8 m-auto">
                 <label htmlFor="UserName">Name</label>
                 <input
                   type="text"
@@ -75,7 +75,7 @@ const Register = ({setopenmodal}) => {
                 />
               </div>
               {/* Email */}
-              <div className="flex flex-col gap-1 mb-4 w-full m-auto px-8">
+              <div className="flex flex-col gap-1 mb-2 w-full m-auto px-8">
                 <label htmlFor="UserEmail">Email</label>
                 <input
                   type="email"
@@ -113,7 +113,7 @@ const Register = ({setopenmodal}) => {
                     </div>
                   </div>
                   {/* Confirm Password */}
-                  <div className="flex flex-col gap-1 mb-4 w-full m-auto">
+                  <div className="flex flex-col gap-1 mb-2 w-full m-auto">
                     <label htmlFor="UserConfirmPassword">
                       Confirm Password
                     </label>
@@ -142,7 +142,7 @@ const Register = ({setopenmodal}) => {
                   </div>
                 </div>
                 <div
-                  className={`mt-2 px-3 py-2 rounded-lg text-sm transition-all duration-300 w-full textt-center ${
+                  className={`mt-2 px-3  rounded-lg text-sm transition-all duration-300 w-full textt-center ${
                     password == `` && cfpassword == ``
                       ? "bg-white"
                       : password === cfpassword
@@ -174,7 +174,7 @@ const Register = ({setopenmodal}) => {
                   />
                 </div>
               </div>
-             <div className="w-full flex justify-center mt-4 mb-4">
+             <div className="w-full flex justify-center mt-2 mb-2">
                    <button type="button"
                   //  onChange={}
                     className="bg-blue-500 py-2.5 px-2 rounded-xl m-auto text-zinc-50 hover:bg-blue-600 ">
