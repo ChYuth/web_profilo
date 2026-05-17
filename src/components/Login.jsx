@@ -5,7 +5,7 @@ import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { FaInstagram } from "react-icons/fa";
 import Picture from "../assets/img/ChorkRayuth.jpg";
-import Register from "./Register";
+// import Register from "./Register";
 const Login = () => {
   const [open,setopen] = useState(false);
   return (
@@ -127,16 +127,16 @@ const Login = () => {
                 <Link
                   // to="/register"
                   className="font-medium text-blue-600 hover:underline"
-                  onClick={() => {
-                    setopen(true);
-                  }}
+                  // onClick={() => {
+                  //   setopen(true);
+                  // }}
                 >
                   Register here
                 </Link>
               </p>
             </div>
           </form>
-          {open && <Register/>} 
+          {/* {open && <Register/>}  */}
         </div>
 
         </div>
