@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaFacebook } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
@@ -41,10 +41,10 @@ const Login = () => {
         data-aos="fade-left"
         data-aos-duration="1000"
         data-aos-easing="ease-in-out">
-          <form
-            action="#"
-            className="w-full lg:w-full  shadow-lg p-2 bg-amber-50 rounded-4xl border-b-6 border-amber-300 border-t-8 border-l-2 border-r-2"
-          >
+        <form
+  action="#"
+  className="bg-zinc-100 shadow-xl rounded-3xl flex flex-col p-4 sm:p-6 gap-3 border-b-4 border-r-2 border-l-2 border-amber-500 max-h-[90vh] overflow-y-auto"
+>
             {/* header */}
             <div className="w-full mb-6 text-4xl text-center font-bold text-gray-800">
               <h1 className="text-3xl font-extrabold">Login</h1>
@@ -144,7 +144,7 @@ const Login = () => {
           {
             openmodal && (
               <div className="fixed inset-0 bg-black/90 flex justify-center items-center z-50">
-                <div className="mt-20">
+                <div className="mt-40 lg:mt-60 md:mt-70">
                   <Register setopenmodal={setopenmodal} />
                 </div>
               </div>
