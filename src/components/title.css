@@ -1,0 +1,53 @@
+.anima {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid black;
+ background-size: 300%;
+ margin-bottom: 10px;
+ word-spacing: 10px;
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  width: 0;
+  animation: typing 4s steps(15) infinite alternate,
+             blink 0.7s infinite,gradientMove 3s linear infinite;
+            
+}
+
+/* forward → backward */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 13ch }
+}
+
+/* cursor blink */
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+@keyframes gradientMove {
+  0% { background-position: 0% }
+  100% { background-position: 100% }
+}
+
+.animate-float{
+  animation: float 2s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
