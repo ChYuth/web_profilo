@@ -30,9 +30,9 @@ const MainLayout = ({ children }) => {
               src={Picture}
               alt="user"
             />
-            <button className="text-sm px-4 py-2 rounded bg-blue-500 text-white">
+            {/* <button className="text-sm px-4 py-2 rounded bg-blue-500 text-white">
               <Link to="/login">Login</Link>
-            </button>
+            </button> */}
 
             {/* ✅ Toggle button — visible only on mobile */}
             <button

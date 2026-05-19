@@ -6,6 +6,7 @@ import { FcGoogle } from "react-icons/fc";
 import { FaInstagram } from "react-icons/fa";
 import Picture from "../assets/img/ChorkRayuth.jpg";
 import Register from '/src/components/Register.jsx'
+import Dashboard from "../page/Dashboard";
 import Aos from "aos";
 const Login = () => {
   const [openmodal,setopenmodal] = useState(false);
@@ -109,10 +110,14 @@ const Login = () => {
             {/* submit */}
             <div className="w-3/4 mb-4 m-auto">
               <button
-                type="button"
+                type="button" 
                 className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
               >
-                Login to your account
+               <Link
+               to="/dashboard"
+               >
+                Login to Account
+               </Link>
               </button>
             </div>
             {/* Icon */}
