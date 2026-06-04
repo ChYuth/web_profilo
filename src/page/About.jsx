@@ -80,6 +80,7 @@ const About = () => {
       percentage: "30%",
     },
   ];
+
   return (
     <>
       <div className="scroll-smooth">
@@ -241,12 +242,13 @@ const About = () => {
         </div>
       </div>
       <div className="container bg-transparent m-auto  p-4 rounded-3xl backdrop-blur-2xl flex flex-col justify-center mt-4">
-        <h1 className="text-center text-2xl font-semibold text-green-600 border-b-6 border-cyan-500 border-r-2 border-l-2 w-fit m-auto p-4 rounded-lg shadow-md"
-         data-aos="fade-down"
-         data-aos-duration="600"
-         data-aos-delay="100"
+        <h1
+          className="text-center text-2xl font-semibold text-green-600 border-b-6 border-cyan-500 border-r-2 border-l-2 w-fit m-auto p-4 rounded-lg shadow-md"
+          data-aos="fade-down"
+          data-aos-duration="600"
+          data-aos-delay="100"
         >
-        Skill Proficiency and Experience Work + Assignment at school
+          Skill Proficiency and Experience Work + Assignment at school
         </h1>
         <div className="w-full bg-transparent shadow-xl p-4 rounded-3xl border-b-4 backdrop-blur-2xl grid grid-cols-2 place-items-center gap-4 cursor-pointer  mt-4">
           {programLanguages.map((items) => {
@@ -276,18 +278,30 @@ const About = () => {
                   },
                 }}
               >
-               <div className="w-full h-auto flex flex-wrap items-center justify-between gap-4 p-2">
-                 <h1 className="text-sm lg:text-xl md:text-lg  text-start  h-auto flex items-center mt-2 gap-4">
-                  {items.name} 
-                </h1>
-                <span className="text-2xl lg:text-4xl md:text-3xl">{items.icon}</span>
-               </div>
+                <div className="w-full h-auto flex flex-wrap items-center justify-between gap-4 p-2">
+                  <h1 className="text-sm lg:text-xl md:text-lg  text-start  h-auto flex items-center mt-2 gap-4">
+                    {items.name}
+                  </h1>
+                  <span className="text-2xl lg:text-4xl md:text-3xl">
+                    {items.icon}
+                  </span>
+                </div>
                 <div className="w-full h-6 rounded-full overflow-hidden flex  items-center gap-4 p-2 mb-2">
                   {/* width color */}
                   <div className="w-full h-full bg-gray-200 rounded-full overflow-hidden mt-2">
                     <div
-                      className=" container h-full bg-amber-500 rounded-full"
-                      style={{ width: items.percentage }}
+                      className=" container h-full bg-sky-500 rounded-full"
+                      style={{
+                        width: items.percentage,
+                        backgroundColor:
+                          items.percentage >= "80%"
+                            ? "#3b82f6"
+                            : items.percentage >= "60%"
+                              ? "#fbbf24"
+                              : items.percentage >= "30%"
+                                ? "#ef4444"
+                                : "#10b981",
+                      }}
                     ></div>
                   </div>
                   {/* number */}
