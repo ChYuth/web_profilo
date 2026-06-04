@@ -47,7 +47,7 @@ const About = () => {
     {
       name: "React-Vite",
       icon: <FaReact />,
-      percentage: "30%",
+      percentage: "50%",
     },
     {
       name: "Tailwind",
@@ -77,7 +77,7 @@ const About = () => {
     {
       name: "CCNA 1",
       icon: <FaNetworkWired />,
-      percentage: "30%",
+      percentage: "60%",
     },
   ];
 
