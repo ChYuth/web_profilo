@@ -252,7 +252,8 @@ const About = () => {
           {programLanguages.map((items) => {
             return (
               <motion.div
-                className="text-center text-2xl font-semibold text-amber-600 m-auto rounded-lg shadow-lg border-b-8 border-cyan-500 border-l-2 border-r-2 container h-full px-6  flex flex-col justify-center items-center gap-4"
+                className="text-center text-2xl font-semibold text-amber-600 m-auto rounded-lg shadow-lg border-b-8 border-cyan-500 border-l-2
+                 border-r-2 container h-full px-6  flex flex-col justify-center items-center gap-4"
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ amount: 0.3 }}
@@ -275,13 +276,13 @@ const About = () => {
                   },
                 }}
               >
-               <div>
-                 <h1 className="text-sm lg:text-xl md:text-lg  text-start w-full h-auto flex items-center mt-2 gap-4">
+               <div className="w-full h-auto flex flex-wrap items-center justify-between gap-4 p-2">
+                 <h1 className="text-sm lg:text-xl md:text-lg  text-start  h-auto flex items-center mt-2 gap-4">
                   {items.name} 
                 </h1>
                 <span className="text-2xl lg:text-4xl md:text-3xl">{items.icon}</span>
                </div>
-                <div className="w-full h-6 rounded-full overflow-hidden flex items-center gap-4 p-2 mb-2">
+                <div className="w-full h-6 rounded-full overflow-hidden flex  items-center gap-4 p-2 mb-2">
                   {/* width color */}
                   <div className="w-full h-full bg-gray-200 rounded-full overflow-hidden mt-2">
                     <div
