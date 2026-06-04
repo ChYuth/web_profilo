@@ -13,6 +13,7 @@ import { TbBrandAdobePhotoshop } from "react-icons/tb"; //adobe ps icon
 import { FaWindows } from "react-icons/fa"; //windows icon
 import { GrGoogle } from "react-icons/gr"; //google icon
 import { FaNetworkWired } from "react-icons/fa"; //network icon
+import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../components/title.css";
@@ -31,42 +32,52 @@ const About = () => {
     {
       name: "HTML",
       icon: <FaHtml5 />,
+      percentage: "80%",
     },
     {
       name: "CSS",
       icon: <FaCss3Alt />,
+      percentage: "80%",
     },
     {
       name: "JavaScript",
       icon: <BsJavascript />,
+      percentage: "60%",
     },
     {
       name: "React-Vite",
       icon: <FaReact />,
+      percentage: "30%",
     },
     {
       name: "Tailwind",
       icon: <RiTailwindCssFill />,
+      percentage: "80%",
     },
     {
       name: "C++",
       icon: <TbBrandCpp />,
+      percentage: "80%",
     },
     {
       name: "PhotoShop",
       icon: <TbBrandAdobePhotoshop />,
+      percentage: "80%",
     },
     {
       name: "Ms.Office",
       icon: <FaWindows />,
+      percentage: "90%",
     },
     {
       name: "Google App",
       icon: <GrGoogle />,
+      percentage: "90%",
     },
     {
       name: "CCNA 1",
       icon: <FaNetworkWired />,
+      percentage: "30%",
     },
   ];
   return (
@@ -107,7 +118,7 @@ const About = () => {
                 data-aos="fade-left"
                 data-aos-duration="600"
                 data-aos-delay="200"
-                className="text-center md:text-start lg:text-start text-2xl font-bold mb-4 text-amber-300"
+                className="text-center md:text-start lg:text-start text-2xl font-bold mb-4 text-amber-700"
               >
                 Chork RaYuth
               </h2>
@@ -194,24 +205,99 @@ const About = () => {
             <div className=" w-full lg:w-4/5 h-full flex flex-wrap justify-center items-center m-auto gap-4 p-2  mb-2">
               {programLanguages.map((items, index) => {
                 return (
-                  <div
-                    className="bg-amber-50 w-[200px] h-auto flex flex-col justify-center items-center gap-2 p-4 rounded-lg shadow-lg text-3xl font-bold text-amber-600
-                     hover:bg-amber-100 duration-300 transition-transform ease-in-out hover:scale-95
-                     border-b-4 border-a,ber-500 border-l-2 border-r-2 
-                     "
-                    data-aos="fade-up"
-                    data-aos-duration="800"
-                    data-aos-delay="500"
+                  <motion.div
+                    className="
+                      bg-amber-50 w-[200px] h-auto
+                      flex flex-col justify-center items-center gap-2
+                      p-4 rounded-lg shadow-lg
+                      text-amber-600
+                      border-b-4 border-amber-500 border-l-2 border-r-2"
+                    initial={{ opacity: 0, y: 50, scale: 0.8 }}
+                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      duration: 0.5,
+                      delay: index * 0.15,
+                      type: "spring",
+                      stiffness: 120,
+                    }}
+                    whileHover={{
+                      scale: 1.08,
+                      y: -10,
+                      rotate: 2,
+                    }}
+                    whileTap={{
+                      scale: 0.95,
+                      borderColor: "#fbbf24",
+                    }}
                   >
                     <h1 className="text-xl">{items.name}</h1>
                     <h1 className="text-4xl">{items.icon}</h1>
-                  </div>
+                  </motion.div>
                 );
               })}
             </div>
           </div>
         </div>
-        Skills
+      </div>
+      <div className="container bg-transparent m-auto  p-4 rounded-3xl backdrop-blur-2xl flex flex-col justify-center mt-4">
+        <h1 className="text-center text-2xl font-semibold text-green-600 border-b-6 border-cyan-500 border-r-2 border-l-2 w-fit m-auto p-4 rounded-lg shadow-md"
+         data-aos="fade-down"
+         data-aos-duration="600"
+         data-aos-delay="100"
+        >
+        Skill Proficiency and Experience Work + Assignment at school
+        </h1>
+        <div className="w-full bg-transparent shadow-xl p-4 rounded-3xl border-b-4 backdrop-blur-2xl grid grid-cols-2 place-items-center gap-4 cursor-pointer  mt-4">
+          {programLanguages.map((items) => {
+            return (
+              <motion.div
+                className="text-center text-2xl font-semibold text-amber-600 m-auto rounded-lg shadow-lg border-b-8 border-cyan-500 border-l-2 border-r-2 container h-full px-6  flex flex-col justify-center items-center gap-4"
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ amount: 0.3 }}
+                transition={{
+                  duration: 0.8,
+                  ease: "easeOut",
+                }}
+                whileHover={{
+                  scale: 1.03,
+                  y: -5,
+                  transition: {
+                    duration: 0.3,
+                    ease: "easeOut",
+                  },
+                }}
+                whileTap={{
+                  scale: 0.98,
+                  transition: {
+                    duration: 0.15,
+                  },
+                }}
+              >
+               <div>
+                 <h1 className="text-sm lg:text-xl md:text-lg  text-start w-full h-auto flex items-center mt-2 gap-4">
+                  {items.name} 
+                </h1>
+                <span className="text-2xl lg:text-4xl md:text-3xl">{items.icon}</span>
+               </div>
+                <div className="w-full h-6 rounded-full overflow-hidden flex items-center gap-4 p-2 mb-2">
+                  {/* width color */}
+                  <div className="w-full h-full bg-gray-200 rounded-full overflow-hidden mt-2">
+                    <div
+                      className=" container h-full bg-amber-500 rounded-full"
+                      style={{ width: items.percentage }}
+                    ></div>
+                  </div>
+                  {/* number */}
+                  <span className="text-sm text-gray-600 ">
+                    {items.percentage}
+                  </span>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
       </div>
     </>
   );

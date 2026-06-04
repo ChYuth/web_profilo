@@ -87,7 +87,7 @@ const MainLayout = ({ children }) => {
       data-aos="fade-up"
       style={{ background: "#1a1a2e", color: "#aaa", textAlign: "center", padding: "20px" }}
       >
-        <p>© 2025 MyShop. រក្សាសិទ្ធិទាំងអស់។</p>
+        <p>© 2026 MyShop. រក្សាសិទ្ធិទាំងអស់។</p>
       </footer>
 
     </div>
